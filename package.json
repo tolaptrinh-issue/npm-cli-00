@@ -1,0 +1,16 @@
+{
+  "name": "npm-cli-00",
+  "version": "1.0.0",
+  "description": "npm-cli-00",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "logviewer": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "yargs": "^17.0.0"
+  }
+}
