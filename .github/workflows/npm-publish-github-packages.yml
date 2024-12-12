@@ -11,21 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Chọn phiên bản Node.js bạn muốn sử dụng
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Publish to NPM
-        run: |
-          npm version patch  # Tăng phiên bản lên patch, hoặc có thể dùng major, minor
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  # NPM token để authenticate với NPM
+          node-version: "20"
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
 
