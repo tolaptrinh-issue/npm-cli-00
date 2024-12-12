@@ -1,0 +1,17 @@
+name: Publish to NPM
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main  # Chạy workflow khi có push lên nhánh main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Install dependencies
+        run: |
+          npm install -g npm-cli-00
+          logviewer log --level info --message "This is an info message"
