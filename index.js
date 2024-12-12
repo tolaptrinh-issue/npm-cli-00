@@ -1,7 +1,7 @@
 const yargs = require('yargs');
 const chalk = require('chalk');
 
-// Cấu hình các tùy chọn dòng lệnh
+// Cấu hình các tùy chọn dòng lệnh;
 yargs.command({
   command: 'log',
   describe: 'Show log messages',
